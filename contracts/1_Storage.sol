@@ -14,34 +14,43 @@ contract TestingDataTypes {
 
 contract SimpleStorage {
     //initialized as 0 if no initial value
-    uint256  favoriteNumber; 
+    //visibility keyword 
+    int age; 
     
     struct People {
         int age;
         string name;
     }
 
+    mapping(string => int) public key;
+
+    //people button
     People[] public people;
+    //end
     
-    function store(uint256 _favoriteNumber) public  {
-        favoriteNumber = _favoriteNumber;
+    function store(int _age) public  {
+        age = _age;
     }
     
+  
+    //no modification is allowed , view , pure
+    function retrieve() public view returns(int){
+        return age;
+    }    
+
     function addPerson(string memory _name , int _age) public  {
         People memory newPerson = People({age:_age , name:_name});
         people.push(newPerson);
+        key[_name] = _age;
     }
+
     function retrievePerson() public view returns (People[] memory){
         return people;
     }
 
-    //no modification is allowed , view , pure
-    function retrieve() public view returns(uint256){
-        return favoriteNumber;
-    }    
 
     //calldata , memory , storage
-    //if no explicit = initialize to storage
+    //if no explicit data location will initialize to storage
     //memory  = temp data
     //calldata = cannot reassign
 }
