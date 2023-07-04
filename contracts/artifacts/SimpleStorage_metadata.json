@@ -4,7 +4,101 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "_age",
+						"type": "int256"
+					}
+				],
+				"name": "addPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "people",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "age",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrievePerson",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "age",
+								"type": "int256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct SimpleStorage.People[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +127,11 @@
 	},
 	"sources": {
 		"contracts/1_Storage.sol": {
-			"keccak256": "0xc15277a2a4227bd665914552ccd4c8df25f5ca3233040ef5b13b9f7be6efd156",
+			"keccak256": "0xc3e55a4d9066d924c1afa7060cbdfe457e688ee6d30ad476a5cf07c44eb54947",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://af80a7273d82a8bf534f054e8b18de95d890100f617c8f09d7e324362c46444a",
-				"dweb:/ipfs/QmXQ4ag3VfuQAGw1xDy24vcd3zbCjpa3M7jXQWqEHjbUAJ"
+				"bzz-raw://07f3ae24108a464fb8dcfd00c7427e3e2d8fcb8d0dc7f2bf126185b122e368c1",
+				"dweb:/ipfs/QmeLfwTAHE1kAwCph9hPPhyHcqqcAoRPJ56FrMK5Fm847v"
 			]
 		}
 	},
