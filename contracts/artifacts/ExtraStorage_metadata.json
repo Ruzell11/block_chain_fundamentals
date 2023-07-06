@@ -1,0 +1,151 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "retrieveAllPerson",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "key",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "nameOfPeople",
+								"type": "string"
+							},
+							{
+								"internalType": "int256",
+								"name": "ageOfPeople",
+								"type": "int256"
+							}
+						],
+						"internalType": "struct SimpleStorage.People[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_keyIdentifier",
+						"type": "uint256"
+					}
+				],
+				"name": "retrieveSinglePerson",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "key",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "nameOfPeople",
+								"type": "string"
+							},
+							{
+								"internalType": "int256",
+								"name": "ageOfPeople",
+								"type": "int256"
+							}
+						],
+						"internalType": "struct SimpleStorage.People",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieveTheCurrentKey",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nameOfPeople",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "_ageOfPeople",
+						"type": "int256"
+					}
+				],
+				"name": "storePerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ExtraStorage.sol": "ExtraStorage"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ExtraStorage.sol": {
+			"keccak256": "0xa1e10816a3d86647671b53f1e8b0cb90b8eb300abe7261ede43b5fd98dd28bbc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://af66dc197f272cfd960f946c11bfbe4cf2b28090247914593aa00e1f2a8d27f5",
+				"dweb:/ipfs/QmV4aKJn3DYAE4JXjca2sqzCFLFDTmtUfad5DutdhAKBa9"
+			]
+		},
+		"contracts/SimpleStorage.sol": {
+			"keccak256": "0xe2aa62c7145d5cea7af2424dd2f2c7bf43ecc9ce596a6637931986243ca43ca0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8be7265394928b9c080d33b9a5be47a15cdf03ea0d69a9e3a55e6cdf5292498f",
+				"dweb:/ipfs/QmTLwzDdVLqGzNBUykoQqMtemcHSpDE4YFWPk4qXdWfqWu"
+			]
+		}
+	},
+	"version": 1
+}
