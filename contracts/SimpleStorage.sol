@@ -32,7 +32,7 @@ contract SimpleStorage {
         return currentKey;
     }
 
-    function storePerson(string memory _nameOfPeople , int _ageOfPeople) public  {
+    function storePerson(string memory _nameOfPeople , int _ageOfPeople) public virtual  {
       People memory newPerson = People(currentKey,_nameOfPeople , _ageOfPeople);
       people.push(newPerson);
       nameOfPeople[currentKey] = newPerson;
