@@ -6,94 +6,25 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					},
-					{
-						"internalType": "int256",
-						"name": "_age",
-						"type": "int256"
-					}
-				],
-				"name": "addPerson",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"name": "key",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "people",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "age",
-						"type": "int256"
-					},
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "retrieve",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "retrievePerson",
+				"name": "retrieveAllPerson",
 				"outputs": [
 					{
 						"components": [
 							{
-								"internalType": "int256",
-								"name": "age",
-								"type": "int256"
+								"internalType": "uint256",
+								"name": "key",
+								"type": "uint256"
 							},
 							{
 								"internalType": "string",
-								"name": "name",
+								"name": "nameOfPeople",
 								"type": "string"
+							},
+							{
+								"internalType": "int256",
+								"name": "ageOfPeople",
+								"type": "int256"
 							}
 						],
 						"internalType": "struct SimpleStorage.People[]",
@@ -107,12 +38,66 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "_keyIdentifier",
+						"type": "uint256"
+					}
+				],
+				"name": "retrieveSinglePerson",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "key",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "nameOfPeople",
+								"type": "string"
+							},
+							{
+								"internalType": "int256",
+								"name": "ageOfPeople",
+								"type": "int256"
+							}
+						],
+						"internalType": "struct SimpleStorage.People",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieveTheCurrentKey",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nameOfPeople",
+						"type": "string"
+					},
+					{
 						"internalType": "int256",
-						"name": "_age",
+						"name": "_ageOfPeople",
 						"type": "int256"
 					}
 				],
-				"name": "store",
+				"name": "storePerson",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -131,7 +116,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/1_Storage.sol": "SimpleStorage"
+			"contracts/SimpleStorage.sol": "SimpleStorage"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -145,12 +130,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/1_Storage.sol": {
-			"keccak256": "0xdc08d2b4e8fb4f743f3bf2791c5f31552358adc2dee7ece24cf27c8c35d406cd",
+		"contracts/SimpleStorage.sol": {
+			"keccak256": "0x32251a288474e992e6dc0c01f69a70ce61a57fe00b7dae7a96715c61c3ea192a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://47114c15dbc013663e69ef9c73c1eb4e4d873a04b8935eb1f62acbb7e281ca9c",
-				"dweb:/ipfs/QmPyGvJJs4BcnKViRQpgcEQCbuCqPD7Y5PXsfYCZhH3b71"
+				"bzz-raw://7bd5f984d8f057bc19da9df22b3d2f0d97a88be9ff60c3506db8e1390916ed98",
+				"dweb:/ipfs/QmRqL2cidyXbYGVjf6obm7U41bWDFFLyENgoGZjcJDBV9b"
 			]
 		}
 	},
